@@ -17,7 +17,7 @@ router.param('userId', getUserById);
 router.param('categoryId', getCategoryById);
 
 //routes come here
-router.post('/category/user/:userId', isSignedIn, isAuthenticated, isAdmin, createCategory);
+router.post('/category/create/:userId', isSignedIn, isAuthenticated, isAdmin, createCategory);
 router.get('/category/:categoryId', getCategory);
 router.get('/categories', getAllCategory);
 router.put('/category/:categoryId/:userId', isSignedIn, isAuthenticated, isAdmin, updateCategory);

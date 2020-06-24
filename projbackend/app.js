@@ -7,6 +7,8 @@ const authRoutes = require('./routes/auth');
 const userRotes = require('./routes/user');
 const categoryRoutes = require('./routes/category');
 const productRoutes = require('./routes/product');
+const orderRoutes = require('./routes/order');
+const paymentRoutes = require('./routes/payment');
 
 let bodyParser = require('body-parser');
 let cookieParser = require('cookie-parser');
@@ -14,12 +16,12 @@ let cors = require('cors');
 
 //DB Connection
 mongoose
-	.connect(process.env.DATABASE, {
-		useNewUrlParser    : true,
-		useUnifiedTopology : true,
-		useCreateIndex     : true
-	})
-	.then(console.log('Database connected!!!'));
+  .connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(console.log('Database connected!!!'));
 
 const app = express();
 
@@ -36,7 +38,9 @@ app.use('/api', authRoutes);
 app.use('/api', userRotes);
 app.use('/api', categoryRoutes);
 app.use('/api', productRoutes);
+app.use('/api', orderRoutes);
+app.use('/api', paymentRoutes);
 
 app.listen(PORT, () => {
-	console.log(`server is up and running on port number ${PORT}`);
+  console.log(`server is up and running on port number ${PORT}`);
 });

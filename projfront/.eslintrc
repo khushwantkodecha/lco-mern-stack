@@ -1,0 +1,18 @@
+{
+    "extends": "react-app",
+    "env": {
+        "es6": true,
+        "node": true
+     },
+    "rules": {
+        "no-console":"warn",
+        "no-alert":"warn",
+        "quotes": [1, "single"],
+        "object-curly-spacing": [1, "always"],
+        "object-shorthand": [1, "always"],
+        "array-bracket-spacing": [1, "always"],
+        "consistent-return": 0,
+        "no-trailing-spaces": 1,
+        "spaced-comment":     [1, "always" ]
+    }
+}

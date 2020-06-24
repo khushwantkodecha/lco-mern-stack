@@ -24,7 +24,6 @@ const signup = (req, res) => {
 };
 
 const signin = (req, res) => {
-	console.log('dddd');
 	const errors = validationResult(req);
 	const { email, password } = req.body;
 	if (!errors.isEmpty()) {

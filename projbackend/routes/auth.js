@@ -17,8 +17,8 @@ router.post(
 router.post(
 	'/signin',
 	[
-		check('email').isEmail().withMessage('email is required!!!'),
-		check('password').isLength({ min: 1 }).withMessage('password can not be blank!!!')
+		// check('email').isEmail().withMessage('email is required!!!'),
+		// check('password').isLength({ min: 1 }).withMessage('password can not be blank!!!')
 	],
 	signin
 );
