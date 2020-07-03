@@ -1,2 +1,4 @@
-./testback/node_modules
 ./projbackend/node_modules
+./projfront/node_modules
+/node_modules
+./node_modules
